@@ -1,30 +1,31 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <ToolBar></ToolBar>
   <router-view />
 </template>
 
+<script>
+import ToolBar from "./components/ToolBar.vue";
+export default {
+  components: {
+    ToolBar,
+  },
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+body {
+  padding: 0;
+  margin: 0;
 }
-
-nav {
-  padding: 30px;
+a {
+  color: rgb(23, 28, 33);
+  text-decoration: none;
 }
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+a:hover {
+  color: #42b883;
+  text-decoration: underline;
 }
-
-nav a.router-link-exact-active {
-  color: #42b983;
+a.router-link-exact-active {
+  text-decoration: underline;
 }
 </style>
